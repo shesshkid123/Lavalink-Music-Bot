@@ -4,13 +4,6 @@ const Enmap = require("enmap");
 const fs = require("fs");
 const Emoji = require("./botconfig/emojis.json")
 const config = require("./botconfig/config.json")
-const express = require('express');
-
-const app = express();
-const port = 3000 || 5000 
-app.get('/', (req, res) => {
-  res.send('Server Connected...')
-});
 
 app.listen(port, () => {
   const stringlength = 69;
