@@ -68,6 +68,6 @@ function requirehandlers() {
 
 
 
-client.login(process.env.token);
+client.login(require('./botconfig/config.json').token);
 
 module.exports.requirehandlers = requirehandlers;
