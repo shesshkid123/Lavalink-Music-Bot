@@ -47,7 +47,7 @@ module.exports = async (client, message) => {
           leftb += "<#" + guild_settings.botchannel[i] + "> / "
         }
         //send informational message
-        try { message.react("833101993668771842"); } catch { }
+        try { message.react("933613190099648552"); } catch { }
         return message.channel.send(new Discord.MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(es.footertext, es.footericon)
@@ -69,8 +69,8 @@ module.exports = async (client, message) => {
     if (cmd.length === 0) {
       if (matchedPrefix.includes(client.user.id))
         return message.channel.send(new Discord.MessageEmbed()
-          .setColor(es.color)
-          .setTitle(`${emoji.msg.SUCCESS} **To see all Commands type: \`${prefix}help\`**`)
+          .setColor(ee.color)
+          .setTitle(`<:tick:933613226803990612> **To see all Commands type: \`${prefix}help\`**`)
         );
       return;
     }
@@ -89,7 +89,7 @@ module.exports = async (client, message) => {
             .setDescription(`The prefix for this Guild is: \`${prefix}\`\n\nYou can also **ping** me, instead of using a Prefix!\n\nTo see all Commands Type \`${prefix}help [Cat/Cmd]\`\n\nTo see all available setups type \`${prefix}setup\``)
           ).then(async msg => {
             try {
-              msg?.delete({ timeout: 5000 }).catch(e => console.log(e));
+              msg.delete({ timeout: 5000 }).catch(e => console.log(e));
             } catch { }
           });
         }
@@ -107,7 +107,7 @@ module.exports = async (client, message) => {
         const expirationTime = timestamps.get(message.author.id) + cooldownAmount; //get the amount of time he needs to wait until he can run the cmd again
         if (now < expirationTime) { //if he is still on cooldonw
           const timeLeft = (expirationTime - now) / 1000; //get the lefttime
-          try { message.react("833101993668771842"); } catch { }
+          try { message.react("933613190099648552"); } catch { }
           return message.channel.send(new Discord.MessageEmbed()
             .setColor(es.wrongcolor)
             .setTitle(`❌ Please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`)
@@ -126,7 +126,7 @@ module.exports = async (client, message) => {
         if (command.memberpermissions) {
           if (!message.member.hasPermission(command.memberpermissions)) {
             not_allowed = true;
-            try { message.react("833101993668771842"); } catch { }
+            try { message.react("933613190099648552"); } catch { }
             message.channel.send(new Discord.MessageEmbed()
               .setColor(es.wrongcolor)
               .setFooter(es.footertext, es.footericon)
@@ -178,7 +178,7 @@ module.exports = async (client, message) => {
             //if not a DJ and not a nAdmin
             if (!isdj && !message.member.hasPermission("ADMINISTRATOR")) {
               if (!player) {
-                try { message.react("833101993668771842").catch(e => console.log("couldn't react this is a catch to prevent a crash".grey)); } catch { }
+                try { message.react("933613190099648552").catch(e => console.log("couldn't react this is a catch to prevent a crash".grey)); } catch { }
                 not_allowed = true;
                 return message.channel.send(new Discord.MessageEmbed()
                   .setColor(ee.wrongcolor)
@@ -192,7 +192,7 @@ module.exports = async (client, message) => {
                 });
               }
               else if (player && player.queue && !player.queue.current) {
-                try { message.react("833101993668771842").catch(e => console.log("couldn't react this is a catch to prevent a crash".grey)); } catch { }
+                try { message.react("933613190099648552").catch(e => console.log("couldn't react this is a catch to prevent a crash".grey)); } catch { }
                 not_allowed = true;
                 return message.channel.send(new Discord.MessageEmbed()
                   .setColor(ee.wrongcolor)
@@ -206,7 +206,7 @@ module.exports = async (client, message) => {
                 });
               }
               else if (player && player.queue.current.requester.id != message.author.id) {
-                try { message.react("833101993668771842").catch(e => console.log("couldn't react this is a catch to prevent a crash".grey)); } catch { }
+                try { message.react("933613190099648552").catch(e => console.log("couldn't react this is a catch to prevent a crash".grey)); } catch { }
                 not_allowed = true;
                 return message.channel.send(new Discord.MessageEmbed()
                   .setColor(ee.wrongcolor)
@@ -346,12 +346,3 @@ module.exports = async (client, message) => {
     );
   }
 }
-/**
-  * @INFO
-  * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
-  * @INFO
-  * Work for Milrato Development | https://milrato.eu
-  * @INFO
-  * Please mention Him / Milrato Development, when using this Code!
-  * @INFO
-*/
