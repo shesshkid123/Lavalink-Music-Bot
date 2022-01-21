@@ -32,7 +32,7 @@ var {
             } catch {}
             try {
               embed.setDescription(`**Commands bound to: ** <#${client.channels.cache.get(player.textChannel).id}>`)
-              embed.addField(`<:Milrato:840259659163893820> Music Powered by Milrato.eu`, `**[Invite their Public Bot](https://discord.com/api/oauth2/authorize?client_id=784364932149280778&permissions=8&scope=bot)  •  [WEBSITE](https://milrato.eu)  •  [Get your OWN BOT](https://discord.gg/FQGXbypRf8)**`)
+              embed.addField(`<a:casque:933614705455554600> Music Powered by Habibi Developement`, `**[Invite Me](https://discord.com/api/oauth2/authorize?client_id=930297293347913818&permissions=8&scope=applications.commands%20bot)  •  [Support Server](https://discord.gg/gAGX7mdpkD)**`)
             } catch {}
 
             await client.channels.cache.get(player.textChannel).send(embed.setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)).catch(e=>console.log("this prevents a crash"));
@@ -675,13 +675,4 @@ var {
           }
         });
   };
-  /**
-   * @INFO
-   * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
-   * @INFO
-   * Work for Milrato Development | https://milrato.eu
-   * @INFO
-   * Please mention Him / Milrato Development, when using this Code!
-   * @INFO
-   */
   
