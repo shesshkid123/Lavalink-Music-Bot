@@ -45,20 +45,20 @@ module.exports = {
           }
           return message.channel.send(embed)
         }
-        if (cmd.name) embed.addField("**<:arrow:832598861813776394> Command name**", `\`${cmd.name}\``);
-        if (cmd.name) embed.setTitle(`<:arrow:832598861813776394> Detailed Information about: \`${cmd.name}\``);
-        if (cmd.description) embed.addField("**<:arrow:832598861813776394> Description**", `\`\`\`${cmd.description}\`\`\``);
+        if (cmd.name) embed.addField("**<a:arrowRightGlow:933615126760800316> Command name**", `\`${cmd.name}\``);
+        if (cmd.name) embed.setTitle(`<a:arrowRightGlow:933615126760800316> Detailed Information about: \`${cmd.name}\``);
+        if (cmd.description) embed.addField("**<a:arrowRightGlow:933615126760800316> Description**", `\`\`\`${cmd.description}\`\`\``);
         if (cmd.aliases) try {
-          embed.addField("**<:arrow:832598861813776394> Aliases**", `\`${cmd.aliases.map((a) => `${a}`).join("`, `")}\``);
+          embed.addField("**<a:arrowRightGlow:933615126760800316> Aliases**", `\`${cmd.aliases.map((a) => `${a}`).join("`, `")}\``);
         } catch { }
-        if (cmd.cooldown) embed.addField("**<:arrow:832598861813776394> Cooldown**", `\`\`\`${cmd.cooldown} Seconds\`\`\``);
-        else embed.addField("**<:arrow:832598861813776394> Cooldown**", `\`\`\`3 Seconds\`\`\``);
+        if (cmd.cooldown) embed.addField("**<a:arrowRightGlow:933615126760800316> Cooldown**", `\`\`\`${cmd.cooldown} Seconds\`\`\``);
+        else embed.addField("**<a:arrowRightGlow:933615126760800316> Cooldown**", `\`\`\`3 Seconds\`\`\``);
         if (cmd.usage) {
-          embed.addField("**<:arrow:832598861813776394> Usage**", `\`\`\`${config.prefix}${cmd.usage}\`\`\``);
+          embed.addField("**<a:arrowRightGlow:933615126760800316> Usage**", `\`\`\`${config.prefix}${cmd.usage}\`\`\``);
           embed.setFooter("Syntax: <> = required, [] = optional", es.footericon);
         }
         if (cmd.useage) {
-          embed.addField("**<:arrow:832598861813776394> Useage**", `\`\`\`${config.prefix}${cmd.useage}\`\`\``);
+          embed.addField("**<a:arrowRightGlow:933615126760800316> Useage**", `\`\`\`${config.prefix}${cmd.useage}\`\`\``);
           embed.setFooter("Syntax: <> = required, [] = optional", es.footericon);
         }
         return message.channel.send(embed);
@@ -66,8 +66,8 @@ module.exports = {
         let button_back = new MessageButton().setStyle('green').setID('1').setLabel("<<")
         let button_home = new MessageButton().setStyle('blurple').setID('2').setLabel("🏠")
         let button_forward = new MessageButton().setStyle('green').setID('3').setLabel('>>')
-        let button_dc = new MessageButton().setStyle('url').setLabel('Get your Own Bot').setURL("https://discord.com/invite/FQGXbypRf8")
-        let button_invite = new MessageButton().setStyle('url').setLabel('Invite Public Version').setURL("https://clan.milrato.eu")
+        let button_dc = new MessageButton().setStyle('url').setLabel('Support Server').setURL("https://discord.gg/gAGX7mdpkD")
+        let button_invite = new MessageButton().setStyle('url').setLabel('Invite Me').setURL("https://discord.com/api/oauth2/authorize?client_id=930297293347913818&permissions=8&scope=applications.commands%20bot")
 
         let button_cat_information = new MessageButton().setStyle('blurple').setID('button_cat_information').setLabel('​Information').setEmoji("🔰")
         let button_cat_music = new MessageButton().setStyle('blurple').setID('button_cat_music').setLabel('​Music Related').setEmoji("🎶")
@@ -91,11 +91,11 @@ module.exports = {
         //define default embed
         let FIRSTEMBED = new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
-          .setFooter("Page Home\n" + client.user.username + " | Kabir Singh OP ", client.user.displayAvatarURL())
+          .setFooter("Page Home\n" + client.user.username + " | Habibi Music", client.user.displayAvatarURL())
           .setTitle(`Information about the  Music Bot: __**${client.user.username}**__`)
           .addField(":muscle: **__My Features__**",
-            `>>> <:Youtube:840260133686870036>
- An advanced <:Spotify:846090652231663647> **Music System** with **Audio Filtering**`)
+            `>>> An Advanced <:Youtube:933612933018173450> **Youtube System** with **Searching Features**
+An advanced <:Spotify:933613004208087050> **Spotify System** with **Audio Filtering**`)
           .addField(":chart_with_upwards_trend: **__STATS:__**",
             `>>> :gear: **${client.commands.map(a => a).length} Commands**
 :file_folder: on **${client.guilds.cache.size} Guilds**
@@ -172,8 +172,8 @@ module.exports = {
         let d_button_back = new MessageButton().setStyle('green').setID('1').setLabel("<<").setDisabled(true);
         let d_button_home = new MessageButton().setStyle('blurple').setID('2').setLabel("🏠").setDisabled(true);
         let d_button_forward = new MessageButton().setStyle('green').setID('3').setLabel('>>').setDisabled(true);
-        let d_button_dc = new MessageButton().setStyle('url').setLabel('Get your Own Bot').setURL("https://discord.com/invite/FQGXbypRf8");
-        let d_button_invite = new MessageButton().setStyle('url').setLabel('Invite Public Version').setURL("https://clan.milrato.eu");
+        let d_button_dc = new MessageButton().setStyle('url').setLabel('Support Server').setURL("https://discord.gg/gAGX7mdpkD");
+        let d_button_invite = new MessageButton().setStyle('url').setLabel('Invite Me').setURL("https://discord.com/api/oauth2/authorize?client_id=930297293347913818&permissions=8&scope=applications.commands%20bot");
 
         let d_button_cat_information = new MessageButton().setStyle('blurple').setID('button_cat_information').setLabel('​Information').setEmoji("🔰").setDisabled(true);
         let d_button_cat_music = new MessageButton().setStyle('blurple').setID('button_cat_music').setLabel('​Music Related').setEmoji("🎶").setDisabled(true);
@@ -210,7 +210,7 @@ module.exports = {
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
           .setTitle(`🔰 Information Commands 🔰`)
           .setDescription(`> ${client.commands.filter((cmd) => cmd.category === "🔰 Info").map((cmd) => `\`${cmd.name}\``).join(", ")}`)
-          .setFooter(`Page 1 / 6  | Tomato Op God\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
+          .setFooter(`Page 1 / 6  | Habibi Music\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
         embeds.push(embed0)
         var embed1 = new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
@@ -238,10 +238,9 @@ module.exports = {
         embeds.push(embed4)
         var embed5 = new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
-          .setTitle("<:Milrato:840259659163893820> Bot Creator")
+          .setTitle("Bot Creator")
 
-          .addField(`> ***[Milrato  Development](https://discord.gg/FQGXbypRf8)***\n>`)
-          .addField(`<:Milrato:840259659163893820> **__Bot Creator Information__**`, `>>> 💯 This Bot has been made by Wumpus :\n[Discord](https://discord.gg/YsHeXa5Q3v)<:Discord:787321652345438228>`)
+          .addField(`**__Bot Creator Information__**`, `>>> 💯 This Bot has been made by Habibi & HPRIYAM:\n[Discord](https://discord.gg/gAGX7mdpkD)`)
           .setFooter(`Page 6 / 6  \nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
         embeds.push(embed5)
         return embeds
@@ -256,12 +255,3 @@ module.exports = {
     }
   }
 }
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */
